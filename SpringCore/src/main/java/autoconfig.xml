@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="q1" class="com.springcore.Q1.Role1" factory-method="getobj"></bean>
+<bean class="com.yash.SpringCore.Department" name="department">
+<property name="dname" value="IT"/>
+</bean>
+<bean class="com.yash.SpringCore.Employee" name="emp" autowire="byName">
+ <property name="id" value="101" />
+ <property name="name" value="Suresh Kumar" />
+ <property name="salary" value="45000" />
+</bean>
+<bean id="role" class="com.yash.factoryMethod.Role" factory-method="userRole"></bean>
+<bean id="q3" class="com.springcore.Q3.Emi">
+<property name="rate" value="8.9"></property>
+</bean>
+
+<bean id="q6" class="com.springcore.vowels.StaticVowels" factory-method="getobj"></bean>
+<bean id="q5" class="com.springcore.Q5.Static" factory-method="getobj"></bean>
+
+<bean id="q2" class="com.springcore.Q2.Average">
+<property name="n1" value="30"></property>
+<property name="n2" value="25"></property>
+<property name="n3" value="22"></property>
+<property name="n4" value="45"></property>
+</bean>
+<bean id="q8" class="com.springcore.Q8.Item">
+<constructor-arg>
+<list>
+<value>Book</value>
+<value>NoteBook</value>
+<value>Eraser</value>
+<value>Book</value>
+<value>Pen</value>
+<value>Pencil</value>
+<value>Pen</value>
+</list>
+</constructor-arg>
+</bean>
+<bean id="d1" class="com.springcore.Q4.Department">
+<property name="did" value="101"/>
+<property name="dname" value="HR"/>
+</bean>
+<bean id="q4" class="com.springcore.Q4.Employee" autowire="byName">
+<property name="id" value="1"/>
+<property name="name" value="Rajesh Kumar"/>
+<property name="email" value="rajesh@gmail.com"/>
+<property name="salary" value="45000"/>
+<property name="department" ref="d1"/>
+</bean>
+<bean id="d2" class="com.springcore.Q4.Department">
+<property name="did" value="102"/>
+<property name="dname" value="IT"/>
+</bean>
+<bean id="q41" class="com.springcore.Q4.Employee" autowire="byName">
+<property name="id" value="2"/>
+<property name="name" value="Sunil Kumar"/>
+<property name="email" value="rajesh@gmail.com"/>
+<property name="salary" value="50000"/>
+<property name="department" ref="d2"/>
+</bean>
+</beans>

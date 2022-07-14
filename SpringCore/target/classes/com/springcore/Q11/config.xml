@@ -1,0 +1,90 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+    <bean id ="result" class="com.springcore.Q11.Result" >
+    <constructor-arg value="76"></constructor-arg>
+    <constructor-arg value="80"></constructor-arg>
+    <constructor-arg value="85"></constructor-arg>
+    <constructor-arg value="88"></constructor-arg>
+    </bean>
+    <bean id ="student1" class="com.springcore.Q11.Student" >
+    <constructor-arg value="Farhan"></constructor-arg>
+    <constructor-arg value="01"></constructor-arg>
+    <constructor-arg value="20/05/1997"></constructor-arg>
+    <constructor-arg value="12th"></constructor-arg>
+    <constructor-arg value="A"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result"/>
+    </constructor-arg>
+        </bean>
+
+    <bean id ="result1" class="com.springcore.Q11.Result" >
+    <constructor-arg value="80"></constructor-arg>
+    <constructor-arg value="82"></constructor-arg>
+    <constructor-arg value="89"></constructor-arg>
+    <constructor-arg value="95"></constructor-arg>
+    </bean>
+    <bean id ="student2" class="com.springcore.Q11.Student" >
+    <constructor-arg value="Ajay"></constructor-arg>
+    <constructor-arg value="02"></constructor-arg>
+    <constructor-arg value="19/10/1996"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result1"/>
+    </constructor-arg>
+        </bean>
+
+     <bean id ="result2" class="com.springcore.Q11.Result" >
+    <constructor-arg value="90"></constructor-arg>
+    <constructor-arg value="94"></constructor-arg>
+    <constructor-arg value="89"></constructor-arg>
+    <constructor-arg value="75"></constructor-arg>
+    </bean>
+    <bean id ="student3" class="com.springcore.Q11.Student" >
+    <constructor-arg value="Shambho"></constructor-arg>
+    <constructor-arg value="03"></constructor-arg>
+    <constructor-arg value="19/10/1998"></constructor-arg>
+    <constructor-arg value="First Year"></constructor-arg>
+    <constructor-arg value="a"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result2"/>
+    </constructor-arg>
+        </bean>
+
+        <bean id ="result3" class="com.springcore.Q11.Result" >
+    <constructor-arg value="70"></constructor-arg>
+    <constructor-arg value="82"></constructor-arg>
+    <constructor-arg value="79"></constructor-arg>
+    <constructor-arg value="79"></constructor-arg>
+    </bean>
+    <bean id ="student4" class="com.springcore.Q11.Student" >
+    <constructor-arg value="Rajesh"></constructor-arg>
+    <constructor-arg value="04"></constructor-arg>
+    <constructor-arg value="19/10/1994"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result3"/>
+    </constructor-arg>
+        </bean>
+
+        <bean id ="result4" class="com.springcore.Q11.Result" >
+    <constructor-arg value="88"></constructor-arg>
+    <constructor-arg value="98"></constructor-arg>
+    <constructor-arg value="78"></constructor-arg>
+    <constructor-arg value="87"></constructor-arg>
+    </bean>
+    <bean id ="student5" class="com.springcore.Q11.Student" >
+    <constructor-arg value="ankush"></constructor-arg>
+    <constructor-arg value="05"></constructor-arg>
+    <constructor-arg value="19/10/1995"></constructor-arg>
+    <constructor-arg value="10th"></constructor-arg>
+    <constructor-arg value="B"></constructor-arg>
+    <constructor-arg>
+    <ref bean="result4"/>
+    </constructor-arg>
+        </bean>
+</beans>

@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="cat" class="com.springcore.Q15.Category">
+<property name="cName" value="General Store"/>
+</bean>
+<bean id="ibean" class="com.springcore.Q15.Item" autowire="byName">
+<property name="iname" value="Colgate"/>
+<property name="price" value="40"/>
+<property name="mfgdate" value="19-10-21"/>
+<property name="expdate" value="20-10-2022"/>
+<property name="category" ref="cat"/>
+</bean>
+<bean id="cbean" class="com.springcore.Q15.Customer" autowire="byName">
+<property name="id" value="101"/>
+<property name="name" value="Rajesh Gupta"/>
+<property name="city" value="Surat"/>
+<property name="item" ref="ibean"/>
+</bean>
+
+</beans>
